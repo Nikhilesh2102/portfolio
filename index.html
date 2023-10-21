@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/23fdf0a18e.js" crossorigin="anonymous"></script>
+    <title>Nikhilesh's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nosifer" />
+    <!-- Consolas, 'Courier New', monospace -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-color: #1f2833;
+    background-position: center;
+    z-index: -2;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    z-index: 1030;
+    background-color: #1f2833;
+    height: 100px;
+    /* box-shadow: 0 0 10px black; */
+}
+.menu{
+    margin-right: 70px;
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #c5c6c5;
+    font-size: 18px;
+    margin-left: 18px;
+    transition: transform 0.2s;
+}
+.menu ul li a:hover{
+  transform: scale(1.05);
+    padding-bottom: 8px;
+    border-bottom: 2px solid white;
+}
+@media screen and (max-width:990px) {
+    .menu ul li{
+        background-color: black;
+        width: 100%;
+        padding-right: 20px;
+        font-size: 17px;
+        font-weight: bold;
+    }    
+    .menu ul li a{
+        color: white;
+        margin-top: 10px;
+        border-bottom: 1px solid white;
+    }
+    .nav-bar{
+        width: 85%;
+    }   
+}
+.custom-card {
+            width: 300px;
+            margin: 10px;
+            border: none;
+            /* border-radius: 5px; */
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .custom-card-2{
+            width: 240px;
+            margin: 10px;
+            border: none;
+            /* border-radius: 5px; */
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .custom-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 7px 8px rgba(0, 0, 0, 0.1), 0 7px 12px rgba(0, 0, 0, 0.1);
+        }
+        .custom-card-2:hover {
+            transform: scale(1.05);
+            box-shadow: 0 7px 8px rgba(0, 0, 0, 0.1), 0 7px 12px rgba(0, 0, 0, 0.1);
+        }
+        /* @media (min-width: 768px) {
+            .custom-card-2 {
+                width: 45%; /* Two cards in one row on larger screens */
+            /* }
+        } */ 
+
+        /* .custom-card img {
+            /* width: 80%;
+            height: 200px; */
+            /* border-radius: 5px 5px 0 0; */
+        /* } */ 
+
+        .card-content {
+            padding: 20px;
+        }
+        .card-content-2 {
+            padding: 20px;
+        }
+        .card {
+            width: 600px;
+            transition: transform 0.2s;
+            margin-right: 50px;
+            margin-top: 70px;
+        }
+        .card:hover{
+            height:420px;
+            transform: scale(1.05);
+        }
+        /* .custom-card-2 {
+            width: 45%;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+        } */
+
+        /* .custom-card-2 img {
+           height: 70px;
+        } */
+        #contact {
+  width: 100%;
+  height: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+.form-control, 
+   textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.instagram {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+.github {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+ } 
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+    <nav class="nav-bar navbar navbar-expand-lg  navbar-dark fixed-top" style="padding-top: 10px; width: 100%;">
+
+        <button class="navbar-toggler" type="button" style="border-color: white;" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon " style="z-index: 10;"></span>
+       </button>
+       <a class="navbar-brand" href="/"><img src="./signature.png" alt="logo" style="height: 80px;padding-top: 20px;"></a>
+
+        <div class="menu collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" >
+         <ul class="navbar-nav mr-auto" style="display: flex; align-items: center;">
+           <li style="padding-top: 20px; " ><a href="/portfolio.html" >HOME</a></li>
+           <li style="padding-top: 20px; " ><a href="#myservices" >SERVICES</a></li>
+           <li style="padding-top: 20px; " ><a href="#myworks" > WORKS</a></li>
+           <li style="padding-top: 20px; " ><a href="#contactme" >CONTACT ME</a></li>
+         </ul>
+        </div>
+     </nav>
+     <!-- <div class="home" id="home" style="display: flex; justify-content: space-between; flex-wrap: wrap;"> -->
+
+     <div style="color: #66fcf1; top: 30%; width: 100%; position: absolute;text-align: center; transform: translateY(-50%);">
+        <h1 style="font-size: 70px; margin-top: 150px; z-index: -10;"  >I'm a Web <strong style="color: white;">Developer</strong></h1>   
+        <h3 style="font-size: 40px; margin-top: 10px;margin-right: 20px; z-index: -10; color: white;" >&</h3>
+        <h3 style="font-size: 70px; margin-top: 10px;margin-right: 20px; z-index: -10;" >a Graphic <strong style="color: white;">Designer</strong></h3>
+      </div>
+      
+      
+    
+    <!-- </div> -->
+    </div>
+    <div class="myservices" id="myservices" style="height: fit-content; display: flex; flex-direction: column; align-items: center; ">
+        <div style="margin-top: 140px; ">
+            <h6 style="font-weight: bold; border-bottom: 2px solid black;"> MY SERVICES</h6> 
+        </div> <br>  
+        <div style="display: flex; flex-wrap: wrap; height: fit-content; ">
+        <div class="custom-card">
+            <img src="./icons8-website-64.png" alt="Image 1">
+            <div class="card-content" >
+                <h5>WEB DESIGN</h5>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="./icons8-pen-tool-64.png" alt="Image 1">
+            <div class="card-content">
+                <h5>GRAPHIC DESIGN</h5>
+            </div>
+        </div>
+    </div> <br> <br>
+    <div>
+        <h6 style="font-weight: bold; border-bottom: 2px solid black;"> MY SKILLS</h6> 
+    </div> <br>
+    <div style="display: flex; flex-wrap: wrap; height: fit-content; margin-left: 20px; ">
+        <div class="custom-card-2">
+            <img src="./icons8-html-logo-64.png" alt="Image 1">
+            <div class="card-content" >
+                <h5>HTML</h5>
+            </div>
+        </div>
+        <div class="custom-card-2">
+            <img src="./icons8-css-logo-64.png" alt="Image 1">
+            <div class="card-content">
+                <h5>CSS</h5>
+            </div>
+        </div>
+        <div class="custom-card-2">
+            <img src="./icons8-javascript-64.png" alt="Image 1">
+            <div class="card-content">
+                <h5>JAVASCRIPT</h5>
+            </div>
+        </div>
+        <div class="custom-card-2">
+            <img src="./icons8-django-64.png" alt="Image 1">
+            <div class="card-content">
+                <h5>DJANGO</h5>
+            </div>
+        </div>
+        <div class="custom-card-2">
+            <img src="./icons8-figma-64.png" alt="Image 1">
+            <div class="card-content">
+                <h5>FIGMA</h5>
+            </div>
+        </div>
+    </div>
+        
+    </div> <br><br>
+    <div class="myworks" id="myworks" style="height: fit-content; display: flex; flex-direction: column; align-items: center; ">
+        <div>
+            <h6 style="font-weight: bold; border-bottom: 2px solid black;"> MY WORKS</h6> 
+        </div> <br>
+        <div>
+          <h2 style="
+            font-family: 'Nosifer';
+            font-style: normal;
+            font-size: 25px;
+            font-weight: 100;
+            src: url(https://fonts.gstatic.com/s/nosifer/v22/ZGjXol5JTp0g5bxZWCpbVQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+          " > Elevate your online presence with our web wizardry.</h2> 
+      </div> 
+        <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
+            <div class="card" >
+                <a href="https://nikhilesh2102.pythonanywhere.com" style="text-decoration: none; color: black;" target="_blank">
+                <img src="./works-1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Service Website</h4>
+                  <p>Includes payment integration and responsive.</p>
+                </div></a>
+              </div>
+            <div class="card" >
+                <a href="https://kanakevents.pythonanywhere.com" style="text-decoration: none; color: black;" target="_blank">
+                <img src="./works-2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4>Business Website</h4>
+                  <p>Made to run smooth on mobile.<p>
+                </div></a>
+              </div>
+              <div class="card" style="width: 350px;">
+                <img src="./Untitled (1).png" class="card-img-top" alt="..." >
+                <div class="card-body">
+                  <h4>Personalized logo for a Cafe</h4>
+                </div>
+              </div>
+              
+        </div>
+
+    </div> 
+    <br> <br> 
+   <div class="contactme" id="contactme" style="height: fit-content; display: flex; flex-direction: column; align-items: center; background-color: #1f2833; margin-top: 50px; ">
+    <section id="contact">
+  
+        <h1 class="section-header" style="font-size: 25px;">Contact Me</h1>
+        
+        <div class="contact-wrapper">
+        
+        <!-- Left contact page --> 
+          
+          <form id="contact-form" class="form-horizontal" role="form">
+             
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required style="background-color: white;">
+              </div>
+            </div>
+      
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required style="background-color: white;">
+              </div>
+            </div>
+      
+            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required style="background-color: white;"></textarea>
+            
+            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND" onclick="saveData()">
+              <div class="alt-send-button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+              </div>
+            
+            </button>
+            
+          </form>
+          
+        <!-- Left contact page --> 
+          
+            <div class="direct-contact-container">
+      
+              <ul class="contact-list">
+                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place"><a href="">Indore, Madhya Pradesh</a></span></i></li>
+                
+                <li class="list-item"><i class="fa fa-instagram fa-2x"><span class="contact-text instagram"><a href="https://www.instagram.com/_the.nikhil.b_/" title="Instagram" target="_blank">_the.nikhil.b_</a></span></i></li>
+                
+                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:bvsnikhilesh21@gmail.com" title="Send me an email">bvsnikhilesh21@gmail.com</a></span></i></li>
+
+                <li class="list-item"><i class="fa fa-github fa-2x"><span class="contact-text github"><a href="https://www.github.com/Nikhilesh2102/" title="Github" target="_blank">Nikhilesh2102</a></span></i></li>
+                
+              </ul>
+      
+              <hr>
+              <!-- <ul class="social-media-list">
+                <li><a href="https://www.github.com/Nikhilesh2102" target="_blank" class="contact-icon">
+                  <i class="fa fa-github" ></i></a>
+                </li>
+                 <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-codepen" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li> -->
+                <!-- <li><a href="https://www.instagram.com/_the.nikhil.b_/" target="_blank" class="contact-icon">
+                  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>       
+              </ul> --> 
+              <!-- <hr> -->
+      
+              <!-- <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div> -->
+      
+            </div>
+          
+        </div>
+        
+      </section> 
+   </div>
+      
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        function saveData() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            
+            // Create an object to store the data
+            const formData = {
+                name: name,
+                email: email,
+                message: message
+            };
+            
+            // Convert the data to a JSON string and store it in local storage
+            localStorage.setItem('contactData', JSON.stringify(formData));
+            
+            alert("Data saved locally. You can retrieve it later.");
+        }
+    </script>
+</body>
+</html>
