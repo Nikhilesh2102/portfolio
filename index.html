@@ -13,7 +13,22 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    
 }
+@media screen and (max-width:420px){
+      body{
+        width: 430px;
+      }
+      .banner{
+        height: fit-content;
+      }
+      .home-text{
+        margin-top: 50px;
+        margin-left: 50px;
+      }
+      
+}
+
 .banner{
     width: 100%;
     height: 80vh;
@@ -81,6 +96,14 @@
             text-align: center;
             transition: transform 0.2s;
         }
+        @media screen and (max-width:400px){
+            .custom-card{
+              margin-left: 60px;
+            }
+
+        }
+        
+        
         .custom-card-2{
             width: 240px;
             margin: 10px;
@@ -89,6 +112,12 @@
             /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
             text-align: center;
             transition: transform 0.2s;
+        }
+        @media screen and (max-width:400px){
+            .custom-card-2{
+              margin-left: 70px;
+            }
+    
         }
         .custom-card:hover {
             transform: scale(1.05);
@@ -121,6 +150,12 @@
             transition: transform 0.2s;
             margin-right: 50px;
             margin-top: 70px;
+
+        }
+        @media screen and (max-width: 629px){
+          .card {
+            width: 100%;
+          }
         }
         .card:hover{
             height:420px;
@@ -177,6 +212,16 @@
   background-color: #000;
   color: white;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 569px){
+
+  .form-control, 
+   textarea {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  letter-spacing: 1px;
+}
 }
 
 .send-button {
@@ -397,25 +442,25 @@ hr {
 </head>
 <body>
     <div class="banner">
-    <nav class="nav-bar navbar navbar-expand-lg  navbar-dark fixed-top" style="padding-top: 10px; width: 100%;">
-
+    <nav class="nav-bar navbar navbar-expand-lg  navbar-dark  " style="padding-top: 10px; width: 100%;">
+    <div class="container">
         <button class="navbar-toggler" type="button" style="border-color: white;" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon " style="z-index: 10;"></span>
        </button>
-       <a class="navbar-brand" href="/portfolio"><img src="./signature.png" alt="logo" style="height: 80px;padding-top: 20px;"></a>
+       <a class="navbar-brand" href="/"><img src="./signature.png" alt="logo" style="height: 80px;padding-top: 20px;"></a>
 
         <div class="menu collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" >
          <ul class="navbar-nav mr-auto" style="display: flex; align-items: center;">
-           <li style="padding-top: 20px; " ><a href="/portfolio" >HOME</a></li>
+           <li style="padding-top: 20px; " ><a href="/portfolio.html" >HOME</a></li>
            <li style="padding-top: 20px; " ><a href="#myservices" >SERVICES</a></li>
            <li style="padding-top: 20px; " ><a href="#myworks" > WORKS</a></li>
            <li style="padding-top: 20px; " ><a href="#contactme" >CONTACT ME</a></li>
          </ul>
-        </div>
+        </div></div>
      </nav>
      <!-- <div class="home" id="home" style="display: flex; justify-content: space-between; flex-wrap: wrap;"> -->
 
-     <div style="color: #66fcf1; top: 30%; width: 100%; position: absolute;text-align: center; transform: translateY(-50%);">
+     <div style="color: #66fcf1; top: 30%; width: 100%; position: absolute;text-align: center; transform: translateY(-50%);" class="home-text">
         <h1 style="font-size: 70px; margin-top: 150px; z-index: -10;"  >I'm a Web <strong style="color: white;">Developer</strong></h1>   
         <h3 style="font-size: 40px; margin-top: 10px;margin-right: 20px; z-index: -10; color: white;" >&</h3>
         <h3 style="font-size: 70px; margin-top: 10px;margin-right: 20px; z-index: -10;" >a Graphic <strong style="color: white;">Designer</strong></h3>
@@ -480,7 +525,7 @@ hr {
     </div>
         
     </div> <br><br>
-    <div class="myworks" id="myworks" style="height: fit-content; display: flex; flex-direction: column; align-items: center; ">
+    <div class="myworks" id="myworks" style="height: fit-content; display: flex; flex-direction: column; align-items: center;  ">
         <div>
             <h6 style="font-weight: bold; border-bottom: 2px solid black;"> MY WORKS</h6> 
         </div> <br>
@@ -494,8 +539,8 @@ hr {
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
           " > Elevate your online presence with our web wizardry.</h2> 
       </div> 
-        <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
-            <div class="card" >
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; margin-left: 40px; ">
+            <div class="card" > 
                 <a href="https://nikhilesh2102.pythonanywhere.com" style="text-decoration: none; color: black;" target="_blank">
                 <img src="./works-1.png" class="card-img-top" alt="...">
                 <div class="card-body">
